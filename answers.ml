@@ -19,12 +19,7 @@ fun digitValue (c:char) =
 fun conv (r:real) = (r, (floor r));
 
 (* 6 - Implement the NAND function *)
-fun NAND (x:bool) (y:bool) = 
-  if x
-    then if y
-      then false
-    else false
-  else true;
+fun NAND (x:bool) (y:bool) = ((x<>y)=true);
 
 (* == Question B == *)
 
