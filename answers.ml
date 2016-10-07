@@ -50,10 +50,10 @@ fun sumF f 0 = 0
   | sumF f n = (f n) + (sumF f (n-1));
 
 (* 6 - Write sumSq using sumF. *)
-fun fSumSq n = n*n; 
+fun sumSqF n = sumF (fn x => x*x) n; 
 
 (* 7 - Write sumHalf using sumF *)
-fun fSumHalf n = floor(Real.fromInt(n)/2.0);
+fun fSumHalf n = sumF (fn x => floor(Real.fromInt(n)/2.0)) n;
 
 (* == Question C == *)
 
@@ -69,4 +69,10 @@ fun take 0 l = []
 fun starts [] l2 = true
   | starts l1 [] = false
   | starts l1 l2 = (((hd l1) = (hd l2)) andalso (starts (tl l1) (tl l2)));
+    
+(*4 Write a function to check if list l1 is contained in list l2: *)
+fun contains l1 l2 =
+	if (l2=[]) then false
+  else if l1=l2 then true
+	else false;
     
