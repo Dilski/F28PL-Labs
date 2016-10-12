@@ -1,5 +1,7 @@
 # Programming-Languages-SML
 
+Answer functions are in the "answers.ml" file, and written answers are in the "answersX.txt" files (where X is the section letter).  
+
 ## Question A (Basic SML).
 
 Write SML functions to:
