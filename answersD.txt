@@ -10,3 +10,7 @@ A3 -
 Q4 - With these equations in mind, describe some of the trade-offs involved in choosing a programming language for an embedded chip in a car versus an Android app.
 A4 - Programming an android app typically uses java, a general purpose programming language. Programmer costs for an android app would be low, as java developers are common and easily replaceable. An integrated chip would require a more special developer and would cost more. Integrated chips will require less design and debugging work, as they are designed for one function on one devices. This means design costs will be lower, and debugging will be easier as it won't need to be tested for a range of screen sizes, resources and chips. A developer working for an integrated chip will likely have to produce more efficient code, as the chip will likely have less resources.
 
+Q5 - Pure functional programming has no global state.” Explain what this assertion means and give one advantage and one disadvantage.
+A5 - The global state is the state that is global and can be accessed by anything in the program. Having no global state means that a function with the same input will always return the same result. This means there are no "side-effects" and that functions are always consistent (or concurrent) which is good for calculating results. However, pure functional programming can not have iterative loops.
+
+Q6 - 
