@@ -4,3 +4,8 @@ A1 - Recursion is when a function calls itself inside itself.
 Q2 - Explain tail recursion and how it differs from plain old recursion.
 A2 - In regular recursion, arguments are passed to the function, and the stack frame waits for the return. In tail recursion, the calculations are all performed before the function is called inside itself. This means that the current frame stack is no longer needed and can be re-used (provided the compiler has support for this). Tail recursion works better for efficiency (as you don't need to keep a load of stack frames), however it is not always supported.
 
+Q3 - Explain the Church-Rosser property, and how it is relevant to programming language execution
+A3 - 
+
+Q4 - With these equations in mind, describe some of the trade-offs involved in choosing a programming language for an embedded chip in a car versus an Android app.
+A4 - Programming an android app typically uses java, a general purpose programming language. Programmer costs for an android app would be low, as java developers are common
