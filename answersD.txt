@@ -1,0 +1,6 @@
+Q1 - Explain Recursion
+A1 - Recursion is when a function calls itself inside itself.
+
+Q2 - Explain tail recursion and how it differs from plain old recursion.
+A2 - In regular recursion, arguments are passed to the function, and the stack frame waits for the return. In tail recursion, the calculations are all performed before the function is called inside itself. This means that the current frame stack is no longer needed and can be re-used (provided the compiler has support for this). Tail recursion works better for efficiency (as you don't need to keep a load of stack frames), however it is not always supported.
+
