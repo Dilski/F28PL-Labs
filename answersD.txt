@@ -13,4 +13,5 @@ A4 - Programming an android app typically uses java, a general purpose programmi
 Q5 - Pure functional programming has no global state.” Explain what this assertion means and give one advantage and one disadvantage.
 A5 - The global state is the state that is global and can be accessed by anything in the program. Having no global state means that a function with the same input will always return the same result. This means there are no "side-effects" and that functions are always consistent (or concurrent) which is good for calculating results. However, pure functional programming can not have iterative loops.
 
-Q6 - 
+Q6 - Explain the different optimisations possible in imperative versus declarative programming, and the implications for space and time efficiency and development cost.
+A6 - Declerative programming is where you say what you want, whereas imperative programming says how to get it. 
