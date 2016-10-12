@@ -8,4 +8,5 @@ Q3 - Explain the Church-Rosser property, and how it is relevant to programming l
 A3 - 
 
 Q4 - With these equations in mind, describe some of the trade-offs involved in choosing a programming language for an embedded chip in a car versus an Android app.
-A4 - Programming an android app typically uses java, a general purpose programming language. Programmer costs for an android app would be low, as java developers are common
+A4 - Programming an android app typically uses java, a general purpose programming language. Programmer costs for an android app would be low, as java developers are common and easily replaceable. An integrated chip would require a more special developer and would cost more. Integrated chips will require less design and debugging work, as they are designed for one function on one devices. This means design costs will be lower, and debugging will be easier as it won't need to be tested for a range of screen sizes, resources and chips. A developer working for an integrated chip will likely have to produce more efficient code, as the chip will likely have less resources.
+
