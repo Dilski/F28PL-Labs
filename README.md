@@ -154,11 +154,16 @@ deleteAll [1,2,3] [3,2,1,2,3,2,1,2,3] ==> [3,2,2]
 
 ## Question D (Essay-style, functional programming).
 
-1- Explain recursion.
+1- Explain recursion.  
+  
 2- Explain tail recursion and how it differs from plain old recursion. If you want to write efficient code, which is better, and why?
+  
 3- Explain the Church-Rosser property, and how it is relevant to programming language execution.
+  
 4- The cost of running a calculation is calculated as follows: programmercosts+computingcosts=totalcostsprogrammercosts+computingcosts=totalcosts. A more detailed equation is designcosts+programmercosts+debuggingcosts+computingcosts=totalcostsdesigncosts+programmercosts+debuggingcosts+computingcosts=totalcosts. With these equations in mind, describe some of the trade-offs involved in choosing a programming language for an embedded chip in a car versus an Android app.
+  
 5- “Pure functional programming has no global state.”
 Explain what this assertion means.
 Give one advantage and one disadvantage of using a language without global state.
+  
 6- Explain the different optimisations possible in imperative versus declarative programming, and the implications for space and time efficiency and development cost.
