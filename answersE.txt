@@ -1,4 +1,36 @@
-E 1 - fun IAnd (x:bool) (y:bool) = x=y;
-2 - 16. There are 2 inputs and each of those inputs can be one of two things. Therefore there are 2^2 combinations of inputs. The output of the function can be one of two, so the possible outputs would be 2^combinations of inputs. Therefore we have 2^2^2 which is 16
-3 - both functions are an identity function, which maps a number to itself (or multiplies by 1)
+Q1 - Write a function of type bool -> bool -> bool.
+A1 - fun IAnd (x:bool) (y:bool) = x=y;
 
+Q2 - How many different (in the sense of calculating different truth-tables) functions are there in bool -> bool -> bool?
+A2 - 16. There are 2 inputs and each of those inputs can be one of two things. Therefore there are 2^2 combinations of inputs. The output of the function can be one of two, so the possible outputs would be 2^combinations of inputs. Therefore we have 2^2^2 which is 16
+
+Q3 - Explain the similarities and differences between fn (x:int) => x and fn (x:real) => x.
+A3 - Both functions are an identity function, which maps a number to itself (or multiplies by 1)
+
+Q4 - Write two functions of type ('a -> bool) -> 'a list -> bool.
+     a) return true when the first argument is true of all elements in the second argument.
+     b) should return true when the first argument is true of some element in the second argument.
+A4 - a) fun allTrue f [] = true
+          | allTrue f (hd::tl) = if (f hd) then (allTrue f tl) else false;
+     b) fun someTrue f [] = false
+          | someTrue f (hd::tl) = if (f hd) then true else (someTrue f tl);
+
+Q5 - Write a function of type 'a -> unit. Is it the only one?
+A5 - fun nope n = ();
+     This is the only one.
+
+Q6 - Write a function of type 'a -> ('a*'a). Is it the only one?
+A6 - fun tupple x = (x,x);
+     This is the only one.
+
+Q7 - Write a function of type 'a -> 'b -> ('a*'b)
+A7 - fun tuppleTwo a b = (a,b);
+
+Q8 - How many different functions are there in 'a -> 'b -> ('a*'b)
+A8 - There is only one.
+
+Q9 - Write a function of type 'a -> 'a -> ('a*'a)
+A9 - fun Q9 (x:'a) (y:'a) = (x,y);
+
+A10 - How many different functions are there in 'a -> 'a -> ('a*'a)?
+Q10 - There is only one 
