@@ -1,3 +1,5 @@
+(* == Question F == *)
+
 (* 1 - Write a function to remove all the non-letters off the front of a list of characters *)
 fun strip [] = []
   | strip (hd::tl) = 
