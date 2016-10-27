@@ -34,3 +34,20 @@ A9 - fun Q9 (x:'a) (y:'a) = (x,y);
 
 A10 - How many different functions are there in 'a -> 'a -> ('a*'a)?
 Q10 - There is only one 
+
+Q11 - Write a function of type (('a -> 'b)*'a) -> 'b.
+A11 - fun Q11 (f, n) = f n;
+
+Q12 - How many different functions are there in (('a -> 'b)*'a) -> 'b?
+A12 - There is only one.
+
+Q13 - Write a function of type ('a -> 'b) -> ('b -> 'c) -> ('a -> 'c).
+A13 - fun Q13 funa funb = funb o funa;
+
+Q14 - How many different functions are there in ('a -> 'b) -> ('b -> 'c) -> ('a -> 'c)?
+A14 - There is only 1
+
+Q15 - Write a function of type ('a -> ('b -> 'c)) -> ('a -> 'b) -> ('a -> 'c).
+A15 - 
+
+
