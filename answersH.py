@@ -175,3 +175,4 @@ def flatten(input_list):
 print(flatten([]))  # []
 print(flatten([["hi"], 5]))  # ["hi",5]
 print(flatten([[[], [["hello"], [" "]], [1], [[["world"]], []]], "!"]))  # ["hello"," ",1,"world!"]
+
