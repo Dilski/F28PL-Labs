@@ -10,6 +10,10 @@ fun assertsFalse f q n =
   if (f = false) then ("Question " ^ q ^ ", number " ^ n ^ ": PASS")
   else ("Question " ^ q ^ ", number " ^ n ^ ": FAIL");
 
+fun assertsRealEqual (a:real) (b:real) q n =
+  if (((b-a)<0.000001) ANDALSO ((a-b)<0.000001) then ("Question " ^ q ^ ", number " ^ n ^ ": PASS")
+  else ("Question " ^ q ^ ", number " ^ n ^ ": FAIL");
+
 use "answers.ml";
 
 (* A 1 *)
