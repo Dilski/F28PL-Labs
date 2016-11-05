@@ -1,0 +1,62 @@
+PREFACE: Throughout this question, it asks how many possible types of a function are possible. In theory, each have an infinite amount of functions, by performing arbitrary calculations inside the function. For  example  with question 5 it asks for a function of type `a -> unit. With this, you could have a function such that:
+fun test x = 
+let val y = (x,x)
+in unit end;
+
+This has the smae type as "fun test x = unit", but is different, and such you could generate an infinate amount of these functions, with each one inserting one more of "x" into the tupple than the last. For the sake of ease, i'll ignore these arbirtaty extra functions in my answers.
+
+
+Q1 - Write a function of type bool -> bool -> bool.
+A1 - fun IAnd (x:bool) (y:bool) = x=y;
+
+Q2 - How many different (in the sense of calculating different truth-tables) functions are there in bool -> bool -> bool?
+A2 - 16. There are 2 inputs and each of those inputs can be one of two things. Therefore there are 2^2 combinations of inputs. The output of the function can be one of two, so the possible outputs would be 2^combinations of inputs. Therefore we have 2^2^2 which is 16
+
+Q3 - Explain the similarities and differences between fn (x:int) => x and fn (x:real) => x.
+A3 - Both functions are an identity function, which maps a number to itself (or multiplies by 1). They do however have different types.
+
+Q4 - Write two functions of type ('a -> bool) -> 'a list -> bool.
+     a) return true when the first argument is true of all elements in the second argument.
+     b) should return true when the first argument is true of some element in the second argument.
+A4 - a) fun allTrue f [] = true
+          | allTrue f (hd::tl) = if (f hd) then (allTrue f tl) else false;
+       
+     b) fun someTrue f [] = false
+          | someTrue f (hd::tl) = if (f hd) then true else (someTrue f tl);
+
+Q5 - Write a function of type 'a -> unit. Is it the only one?
+A5 - fun nope n = ();
+     unit is the only unit type, and functions cannot be performed on the unit type. There is no other way to arrive at unit other than throw the rest of the information (i.e `a away).
+
+Q6 - Write a function of type 'a -> ('a*'a). Is it the only one?
+A6 - fun tupple x = (x,x);
+     This is the only function of this. You could insert x into a tupple of length>1 and picking just two elements in it, but that is an arbitrary procedure that would allow for an infinie amount of function possibilities
+
+Q7 - Write a function of type 'a -> 'b -> ('a*'b)
+A7 - fun tuppleTwo a b = (a,b);
+
+Q8 - How many different functions are there in 'a -> 'b -> ('a*'b)
+A8 - There is only one, as two inputs will go into one order. These inputs cannot be manipulated (such as adding or concatinating), as we do not know their types, and one of these operations would force the input to be from a certain type. We could add an infinite amount to a tupple and remove just the two we need, but that would be arbitrary (although an infinite amount would exist)
+
+Q9 - Write a function of type 'a -> 'a -> ('a*'a)
+A9 - fun Q9 (x:'a) (y:'a) = (x,y);
+
+A10 - How many different functions are there in 'a -> 'a -> ('a*'a)?
+Q10 - There id four (with out the infinate arbitrary amount). As they are of type a`, we cannot manipulate the input directly, but we can adjust where they are placed. For example, if we call the inputs x and y, we could get (x,y) (y,x) (x,x) and (y,y). This gives four.
+
+Q11 - Write a function of type (('a -> 'b)*'a) -> 'b.
+A11 - fun Q11 (f, n) = f n;
+
+Q12 - How many different functions are there in (('a -> 'b)*'a) -> 'b?
+A12 - There is only one, as we have no way to get `b without putting it through the `a -> `b function, which we cannot set at it's definition.
+
+Q13 - Write a function of type ('a -> 'b) -> ('b -> 'c) -> ('a -> 'c).
+A13 - fun Q13 funa funb = funb o funa;
+
+Q14 - How many different functions are there in ('a -> 'b) -> ('b -> 'c) -> ('a -> 'c)?
+A14 - There is only 1, as we input two functions 
+
+Q15 - Write a function of type ('a -> ('b -> 'c)) -> ('a -> 'b) -> ('a -> 'c).
+A15 - 
+
+

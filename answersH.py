@@ -149,7 +149,7 @@ print(multpoly(["1", "2", "3", "10"]))  # "12310"
 print(multpoly([[1], [2, 3], [10]]))  # [1,2,3,10]
 
 
-print("-- Part 7 --")
+print("-- Part 8 --")
 '''
 Q - write a recursive program flatten that inputs an arbitrarily nested
     list structure and outputs a “flattened” list consisting of the list of
